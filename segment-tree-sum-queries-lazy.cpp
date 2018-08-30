@@ -61,7 +61,7 @@ long long query(int l, int r, int s, int e, int node){
     return min(query(l, (l + r) >> 1, s, e, node << 1), query(((l + r) >> 1) + 1, r, s, e, (node << 1) + 1));
 }
 int main(){
-    // test on size N
+    // test on size n
     int n;
     cin >> n;
     for (int i = 0; i < n; i++)
@@ -69,7 +69,6 @@ int main(){
 
     build(1, n, 1);
     // testing on Q queries, type 1 is view range, type 2 is update range with v value.
-
     int Q;
     cin >> Q;
     while(Q--){
